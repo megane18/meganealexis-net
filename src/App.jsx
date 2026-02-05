@@ -125,7 +125,7 @@ export default function ProjectHub() {
               Welcome to the Lab
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              A collection of cybersecurity tools and projects built to solve real problems.
+              TEST A collection of cybersecurity tools and projects built to solve real problems.
             </p>
           </div>
 
