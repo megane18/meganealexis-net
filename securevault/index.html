@@ -7,9 +7,7 @@
     <title>SecureVault - Post-Quantum File Encryption</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<!-- <body class="min-h-screen bg-gray-900"> -->
-    <body class="bg-gray-900 overflow-y-hidden">
-
+<body class="bg-gray-900">
 
     <!-- Header -->
     <header class="px-6 py-4 border-b border-gray-800">
@@ -20,22 +18,22 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 py-16">
+    <main class="max-w-4xl mx-auto px-6 py-10">
 
         <!-- Title Section -->
-        <div class="text-center mb-12">
-            <div class="inline-flex items-center gap-2 bg-gray-800 px-3 py-1 rounded-full mb-4">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 bg-gray-800 px-3 py-1 rounded-full mb-3">
                 <div class="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span class="text-sm text-gray-300 font-medium">v0.1.1</span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-light text-white mb-4">SecureVault</h2>
+            <h2 class="text-4xl md:text-5xl font-light text-white mb-3">SecureVault</h2>
             <p class="text-lg text-gray-300 max-w-2xl mx-auto">
                 Post-quantum file encryption tool using hybrid cryptography (X25519 + ML-KEM-768)
             </p>
         </div>
 
         <!-- Read This First -->
-        <div class="mb-12 text-center">
+        <div class="mb-8 text-center">
             <div class="inline-block bg-gray-800 border border-gray-700 rounded-lg px-6 py-4 max-w-3xl">
                 <h3 class="text-white font-medium mb-2">Read this first</h3>
 
@@ -61,7 +59,7 @@
         </div>
 
         <!-- Download Buttons -->
-        <div class="grid md:grid-cols-3 gap-4 mb-12">
+        <div class="grid md:grid-cols-3 gap-4 mb-8">
 
             <a href="downloads/SecureVault-v0.1.1-Windows.exe"
                class="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-6 text-center transition-colors">
@@ -81,7 +79,7 @@
                 <p class="text-sm text-gray-400">Universal Binary</p>
             </a>
 
-             <a href="downloads/SecureVault-v0.1.1-Linux" 
+            <a href="downloads/SecureVault-v0.1.1-Linux"
                class="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-6 text-center transition-colors">
                 <svg class="w-12 h-12 mx-auto mb-3 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.12 1.834.22 2.839.195.558.817.718 1.334.447.286-.149.49-.389.576-.67.093-.294.068-.677-.426-1.615-.485-.918-.44-1.748-.127-2.424.37-.799 1.182-1.729 2.065-2.624.578-.587.872-.965 1.029-1.376.157-.41.183-.848.157-1.376-.052-1.063.567-3.131 3.423-3.8.814-.189 1.89-.14 2.712.134 1.155.384 1.718 1.164 1.897 2.234.068.403.18.949.18 1.376.001.537-.091 1.03-.226 1.438-.135.408-.309.734-.556 1.062-.246.328-.556.686-1.01 1.249-.455.563-1.005 1.198-1.423 2.039-.419.84-.669 1.807-.669 2.763 0 .955.25 1.921.669 2.761.419.84.968 1.476 1.423 2.039.454.563.764.921 1.01 1.249.247.328.421.654.556 1.062.135.408.227.901.226 1.438 0 .427-.112.973-.18 1.376-.179 1.07-.742 1.85-1.897 2.234-.822.274-1.898.323-2.712.134-2.856-.669-3.475-2.737-3.423-3.8.026-.528.0-.966-.157-1.376-.157-.41-.451-.789-1.029-1.376-.883-.895-1.695-1.825-2.065-2.624-.313-.676-.358-1.506.127-2.424.494-.938.519-1.321.426-1.615-.086-.281-.29-.521-.576-.67-.517-.271-1.139-.111-1.334.447-.34 1.005-.498 1.999-.22 2.839.589 1.771 1.831 3.47 2.716 4.521.75 1.067.974 1.928 1.05 3.02.065 1.491-1.056 5.965 3.17 6.298.165.013.325.021.48.021 4.487 0 8.129-3.633 8.129-8.129 0-2.561-1.213-4.873-3.141-6.343.106-.28.163-.593.163-.921 0-1.06-.421-2.03-1.141-2.76.72-.73 1.141-1.7 1.141-2.76 0-.328-.057-.641-.163-.921C20.416 4.752 21.629 2.44 21.629 0c0 4.496-3.642 8.129-8.129 8.129z"/>
@@ -93,13 +91,17 @@
         </div>
 
         <!-- Verify Checksums -->
-        <div class="bg-gray-800 border border-gray-700 rounded-lg p-8 mb-8">
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
             <h3 class="text-xl text-white font-medium mb-4">Verify SHA-256 Checksums</h3>
 
             <p class="text-gray-300 mb-4">
                 After downloading, compute the SHA-256 hash for your file and compare it to the value in
                 <span class="text-gray-200 font-medium">checksums.txt</span>.
                 A perfect match means your download is intact.
+                <a href="./downloads/checksums.txt"
+                   class="text-gray-300 hover:text-white transition-colors underline underline-offset-4 ml-1">
+                    Open checksums.txt
+                </a>
             </p>
 
             <div class="space-y-4 text-sm">
@@ -136,7 +138,7 @@ sha256sum SecureVault-v0.1.1-Linux</code></pre>
     </main>
 
     <!-- Footer -->
-    <footer class="px-6 py-8 border-t border-gray-800 mt-16">
+    <footer class="px-6 py-6 border-t border-gray-800 mt-10">
         <div class="max-w-4xl mx-auto text-center text-sm text-gray-400">
             © 2025 Megane Alexis. All rights reserved.
         </div>
