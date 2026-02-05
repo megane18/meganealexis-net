@@ -21,7 +21,7 @@ export default function ProjectHub() {
       <header className="px-6 py-4 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <img
-            src="/blob-06d7ac6.png"   
+            src="/ma.png"   
             alt="Megane Alexis Logo"
             className="h-8 w-8 object-contain"
           />
