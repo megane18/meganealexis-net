@@ -110,7 +110,7 @@ export default function ProjectHub() {
               <span className="text-gray-600">•</span>
 
               <a
-                href="https://github.com/meganealexis"
+                href="https://github.com/megane18"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 GitHub
