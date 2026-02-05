@@ -28,11 +28,10 @@
             <p class="text-lg text-gray-300 max-w-2xl mx-auto">
                 Post-quantum file encryption tool using hybrid cryptography (X25519 + ML-KEM-768)
             </p>
-           
         </div>
 
         <!-- Download Buttons -->
-        <div class="grid md:grid-cols-3 gap-4 mb-12">
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
             <a href="downloads/SecureVault-v0.1.1-Windows.exe" 
                class="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-6 text-center transition-colors">
                 <svg class="w-12 h-12 mx-auto mb-3 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
@@ -59,8 +58,48 @@
                 <h3 class="text-white font-medium mb-1">Linux</h3>
                 <p class="text-sm text-gray-400">x86_64</p>
             </a>
-            <a href="./downloads/checksums.txt">🔐 SHA-256 Checksums</a>
+        </div>
 
+        <!-- Security Notes (added) -->
+        <div class="mb-12 text-center">
+            <p class="text-sm text-gray-400">
+                Windows may warn because this is a new, unsigned build. This is expected.
+            </p>
+            <p class="text-sm text-gray-400 mt-2">
+                For extra safety, verify the SHA-256 checksum after downloading. 
+                <a href="./downloads/checksums.txt" class="text-gray-300 hover:text-white transition-colors underline underline-offset-4">
+                    View checksums
+                </a>
+            </p>
+        </div>
+
+        <!-- Verify Checksums (added) -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-8 mb-8">
+            <h3 class="text-xl text-white font-medium mb-4">Verify SHA-256 Checksums</h3>
+            <p class="text-gray-300 mb-4">
+                Download the file first; then compute its SHA-256 hash and compare it to <span class="text-gray-200 font-medium">checksums.txt</span>.
+                If the hashes match exactly, your download is intact.
+            </p>
+
+            <div class="space-y-4 text-sm">
+                <div>
+                    <div class="text-gray-200 font-medium mb-2">Windows PowerShell</div>
+                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd $HOME\Downloads
+Get-FileHash .\SecureVault-v0.1.1-Windows.exe -Algorithm SHA256</code></pre>
+                </div>
+
+                <div>
+                    <div class="text-gray-200 font-medium mb-2">macOS (Terminal)</div>
+                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd ~/Downloads
+shasum -a 256 SecureVault-v0.1.1-macOS</code></pre>
+                </div>
+
+                <div>
+                    <div class="text-gray-200 font-medium mb-2">Linux / WSL (Terminal)</div>
+                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd ~/Downloads
+sha256sum SecureVault-v0.1.1-Linux</code></pre>
+                </div>
+            </div>
         </div>
 
         <!-- Features -->
