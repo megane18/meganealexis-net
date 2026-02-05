@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),
   tailwindcss(),
   ],
-  base: '/meganealexis-net/',
+  base: '/',
   server: {
     port: 3000,
     open: true
