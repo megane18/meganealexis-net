@@ -53,7 +53,7 @@ export default function ProjectHub() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                     <img src="../public/securevault-final-v1-512.png" alt="Logo" className="h-8 w-8 object-contain"></img>
+                     <img src="/securevault-final-v1-512.png" alt="Logo" className="h-8 w-8 object-contain"></img>
                     <h3 className="text-xl text-white font-medium mb-2 group-hover:text-gray-100">
                       {project.name}
                     </h3>
