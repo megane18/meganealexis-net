@@ -1,3 +1,3 @@
-8b7a5ac0da170f7c37586d77875c1e77a0410c366d0073f7f1475fffadb7d0a8  SecureVault-v0.2.1.post1-Windows.exe
-a5e6b861e195e943f4a7797764f5b68b0891566ab1fc93598247006fbd4b8b76  SecureVault-v0.2.1.post1-macOS.zip
-4ecf684b5758f372bbfe72c0fa0fa1b477c990c4db4be0ef90dd842b2c98ea84  SecureVault-v0.2.1.post1-Linux
+0ee13408255b60ad667017ba743bef97ad55fa63a8ad7b17b71b4b745bc6b012  SecureVault-v0.3.0-Windows.exe
+08ef597f15fe7c860cf297696f75f57672b83e69469bf5e78730c29fe61b2a4b  SecureVault-v0.3.0-macOS.app.zip
+adb1bb11728a7d793cf6344705e1871d9c2d6e030e463e04eafb9dd295073e58  SecureVault-v0.3.0-Linux
