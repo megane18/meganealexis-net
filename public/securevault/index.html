@@ -18,7 +18,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 py-10">
+    <main class="max-w-7xl mx-auto px-6 py-10">
 
         <!-- Title Section -->
         <div class="text-center mb-8">
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Download Buttons -->
-        <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="grid md:grid-cols-3 gap-4 mb-10">
 
             <a href="downloads/SecureVault-v0.3.0-Windows.exe"
                class="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-6 text-center transition-colors">
@@ -90,41 +90,207 @@
 
         </div>
 
-        <!-- Verify Checksums -->
-        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
-            <h3 class="text-xl text-white font-medium mb-4">Verify SHA-256 Checksums</h3>
+        <!-- Two Column Layout: Getting Started + Verify -->
+        <div class="grid lg:grid-cols-2 gap-6 mb-6">
 
-            <p class="text-gray-300 mb-4">
-                After downloading, compute the SHA-256 hash for your file and compare it to the value in
-                <span class="text-gray-200 font-medium">checksums.txt</span>.
-                A perfect match means your download is intact.
-                <a href="./downloads/checksums.txt"
-                   class="text-gray-300 hover:text-white transition-colors underline underline-offset-4 ml-1">
-                    Open checksums.txt
-                </a>
-            </p>
-
-            <div class="space-y-4 text-sm">
-
-                <div>
-                    <div class="text-gray-200 font-medium mb-2">Windows (PowerShell)</div>
-                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd $HOME\Downloads
-Get-FileHash .\SecureVault-v0.3.0-Windows.exe -Algorithm SHA256</code></pre>
+            <!-- Getting Started Card -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden h-fit">
+                <div class="bg-gradient-to-r from-gray-800 to-gray-750 px-6 py-4 border-b border-gray-700">
+                    <h3 class="text-xl text-white font-medium">Getting Started</h3>
+                    <p class="text-sm text-gray-400 mt-1">Choose your platform and follow the steps</p>
                 </div>
 
-                <div>
-                    <div class="text-gray-200 font-medium mb-2">macOS (Terminal)</div>
-                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd ~/Downloads
-                        shasum -a 256 SecureVault-v0.3.0-macOS.zip</code></pre>
-                </div>
+                <div class="p-6 space-y-6">
 
-                <div>
-                    <div class="text-gray-200 font-medium mb-2">Linux / WSL</div>
-                    <pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto text-gray-200"><code>cd ~/Downloads
-sha256sum SecureVault-v0.3.0-Linux</code></pre>
-                </div>
+                    <!-- Windows -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                            </svg>
+                            <span class="text-white font-medium">Windows</span>
+                        </div>
+                        <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+                            <li>Download the .exe file</li>
+                            <li>Double-click to launch</li>
+                        </ol>
+                        <div class="pt-2">
+                            <p class="text-xs text-gray-400 flex items-start gap-2">
+                                <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>If SmartScreen warns: Click "More info" → "Run anyway"</span>
+                            </p>
+                        </div>
+                    </div>
 
+                    <!-- macOS -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span class="text-white font-medium">macOS</span>
+                        </div>
+                        <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+                            <li>Unzip downloaded file</li>
+                            <li>Open Terminal</li>
+                        </ol>
+                        <div class="space-y-2">
+                            <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs text-gray-200"><code>chmod +x ~/Downloads/SecureVault*.app/Contents/MacOS/SecureVault</code></pre>
+                            <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs text-gray-200"><code>./~/Downloads/SecureVault*.app/Contents/MacOS/SecureVault</code></pre>
+                        </div>
+                        <div class="pt-2">
+                            <p class="text-xs text-gray-400 flex items-start gap-2">
+                                <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>If blocked: Settings → Privacy & Security → "Open Anyway"</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.12 1.834.22 2.839.195.558.817.718 1.334.447.286-.149.49-.389.576-.67.093-.294.068-.677-.426-1.615-.485-.918-.44-1.748-.127-2.424.37-.799 1.182-1.729 2.065-2.624.578-.587.872-.965 1.029-1.376.157-.41.183-.848.157-1.376-.052-1.063.567-3.131 3.423-3.8.814-.189 1.89-.14 2.712.134 1.155.384 1.718 1.164 1.897 2.234.068.403.18.949.18 1.376.001.537-.091 1.03-.226 1.438-.135.408-.309.734-.556 1.062-.246.328-.556.686-1.01 1.249-.455.563-1.005 1.198-1.423 2.039-.419.84-.669 1.807-.669 2.763 0 .955.25 1.921.669 2.761.419.84.968 1.476 1.423 2.039.454.563.764.921 1.01 1.249.247.328.421.654.556 1.062.135.408.227.901.226 1.438 0 .427-.112.973-.18 1.376-.179 1.07-.742 1.85-1.897 2.234-.822.274-1.898.323-2.712.134-2.856-.669-3.475-2.737-3.423-3.8.026-.528.0-.966-.157-1.376-.157-.41-.451-.789-1.029-1.376-.883-.895-1.695-1.825-2.065-2.624-.313-.676-.358-1.506.127-2.424.494-.938.519-1.321.426-1.615-.086-.281-.29-.521-.576-.67-.517-.271-1.139-.111-1.334.447-.34 1.005-.498 1.999-.22 2.839.589 1.771 1.831 3.47 2.716 4.521.75 1.067.974 1.928 1.05 3.02.065 1.491-1.056 5.965 3.17 6.298.165.013.325.021.48.021 4.487 0 8.129-3.633 8.129-8.129 0-2.561-1.213-4.873-3.141-6.343.106-.28.163-.593.163-.921 0-1.06-.421-2.03-1.141-2.76.72-.73 1.141-1.7 1.141-2.76 0-.328-.057-.641-.163-.921C20.416 4.752 21.629 2.44 21.629 0c0 4.496-3.642 8.129-8.129 8.129z"/>
+                            </svg>
+                            <span class="text-white font-medium">Linux</span>
+                        </div>
+                        <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+                            <li>Download the file</li>
+                            <li>Open Terminal</li>
+                        </ol>
+                        <div class="space-y-2">
+                            <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs text-gray-200"><code>chmod +x ~/Downloads/SecureVault*</code></pre>
+                            <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs text-gray-200"><code>./~/Downloads/SecureVault*</code></pre>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+            <!-- Verify Checksums Card -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden h-fit">
+                <div class="bg-gradient-to-r from-gray-800 to-gray-750 px-6 py-4 border-b border-gray-700">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-xl text-white font-medium">Verify Your Download</h3>
+                            <p class="text-sm text-gray-400 mt-1">
+                                Compute SHA-256 hash and compare with 
+                                <a href="./downloads/checksums.txt"
+                                   class="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2">
+                                    checksums.txt
+                                </a>
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full flex-shrink-0">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-xs text-green-400 font-medium">Recommended</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 space-y-6">
+
+                    <!-- Windows -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                            </svg>
+                            <span class="text-sm font-medium text-white">Windows PowerShell</span>
+                        </div>
+                        <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs"><code class="text-gray-200">cd $HOME\Downloads
+Get-FileHash SecureVault-v0.3.0-Windows.exe -Algorithm SHA256</code></pre>
+                    </div>
+
+                    <!-- macOS -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span class="text-sm font-medium text-white">macOS Terminal</span>
+                        </div>
+                        <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs"><code class="text-gray-200">cd ~/Downloads
+shasum -a 256 SecureVault-v0.3.0-macOS.app.zip</code></pre>
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 pb-2 border-b border-gray-700">
+                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.12 1.834.22 2.839.195.558.817.718 1.334.447.286-.149.49-.389.576-.67.093-.294.068-.677-.426-1.615-.485-.918-.44-1.748-.127-2.424.37-.799 1.182-1.729 2.065-2.624.578-.587.872-.965 1.029-1.376.157-.41.183-.848.157-1.376-.052-1.063.567-3.131 3.423-3.8.814-.189 1.89-.14 2.712.134 1.155.384 1.718 1.164 1.897 2.234.068.403.18.949.18 1.376.001.537-.091 1.03-.226 1.438-.135.408-.309.734-.556 1.062-.246.328-.556.686-1.01 1.249-.455.563-1.005 1.198-1.423 2.039-.419.84-.669 1.807-.669 2.763 0 .955.25 1.921.669 2.761.419.84.968 1.476 1.423 2.039.454.563.764.921 1.01 1.249.247.328.421.654.556 1.062.135.408.227.901.226 1.438 0 .427-.112.973-.18 1.376-.179 1.07-.742 1.85-1.897 2.234-.822.274-1.898.323-2.712.134-2.856-.669-3.475-2.737-3.423-3.8.026-.528.0-.966-.157-1.376-.157-.41-.451-.789-1.029-1.376-.883-.895-1.695-1.825-2.065-2.624-.313-.676-.358-1.506.127-2.424.494-.938.519-1.321.426-1.615-.086-.281-.29-.521-.576-.67-.517-.271-1.139-.111-1.334.447-.34 1.005-.498 1.999-.22 2.839.589 1.771 1.831 3.47 2.716 4.521.75 1.067.974 1.928 1.05 3.02.065 1.491-1.056 5.965 3.17 6.298.165.013.325.021.48.021 4.487 0 8.129-3.633 8.129-8.129 0-2.561-1.213-4.873-3.141-6.343.106-.28.163-.593.163-.921 0-1.06-.421-2.03-1.141-2.76.72-.73 1.141-1.7 1.141-2.76 0-.328-.057-.641-.163-.921C20.416 4.752 21.629 2.44 21.629 0c0 4.496-3.642 8.129-8.129 8.129z"/>
+                            </svg>
+                            <span class="text-sm font-medium text-white">Linux / WSL</span>
+                        </div>
+                        <pre class="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto text-xs"><code class="text-gray-200">cd ~/Downloads
+sha256sum SecureVault-v0.3.0-Linux</code></pre>
+                    </div>
+
+                    <!-- Match Instruction -->
+                    <div class="pt-3">
+                        <div class="flex items-start gap-3 bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+                            <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                            </svg>
+                            <div class="text-sm text-gray-300">
+                                Compare the computed hash with checksums.txt. 
+                                <span class="text-white font-medium">If they match exactly</span>, your download is verified and safe.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="pt-3 border-t border-gray-700">
+                        <div class="space-y-4">
+                            <h4 class="text-white font-medium flex items-center gap-2">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Questions?
+                            </h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-gray-400">Contact me</p>
+                                        <a href="mailto:meganealexis12@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                            meganealexis12@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-gray-400">Stay updated on my projects</p>
+                                        <div class="flex flex-wrap gap-2 mt-1">
+                                            <a href="https://meganealexis.com" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">
+                                                meganealexis.com
+                                            </a>
+                                            <span class="text-gray-600">•</span>
+                                            <a href="https://meganealexis.net" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">
+                                                meganealexis.net
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
         <!-- Back Link -->
@@ -139,7 +305,7 @@ sha256sum SecureVault-v0.3.0-Linux</code></pre>
 
     <!-- Footer -->
     <footer class="px-6 py-6 border-t border-gray-800 mt-10">
-        <div class="max-w-4xl mx-auto text-center text-sm text-gray-400">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
             © 2026 Megane Alexis. All rights reserved.
         </div>
     </footer>
